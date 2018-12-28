@@ -1,7 +1,7 @@
 [submodule "xdt"]
 	path = xdt
-	url = https://git01.codeplex.com/xdt
+	url = https://github.com/MazeAdmin/xdt-archive.git
 [submodule "NuGet.Client"]
 	path = NuGet.Client
-	url = https://github.com/NuGet/NuGet.Client.git
+	url = https://github.com/MazeAdmin/NuGet.Client.git
 	branch = dev
