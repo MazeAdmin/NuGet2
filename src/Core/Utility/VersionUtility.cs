@@ -149,7 +149,16 @@ namespace NuGet
             { "Xamarin.XboxThreeSixty", "Xamarin.Xbox360" },
             { "XamarinXboxThreeSixty", "Xamarin.Xbox360" },
             { "Xamarin.XboxOne", "Xamarin.XboxOne" },
-            { "XamarinXboxOne", "Xamarin.XboxOne" }
+            { "XamarinXboxOne", "Xamarin.XboxOne" },
+
+            //Orcus
+            {FrameworkConstants.FrameworkIdentifiers.MazeServer, FrameworkConstants.FrameworkIdentifiers.MazeServer},
+            {FrameworkConstants.FrameworkIdentifiers.MazeAdministration, FrameworkConstants.FrameworkIdentifiers.MazeAdministration},
+            {FrameworkConstants.FrameworkIdentifiers.MazeClient, FrameworkConstants.FrameworkIdentifiers.MazeClient},
+
+            {"server", FrameworkConstants.FrameworkIdentifiers.MazeServer},
+            {"admin", FrameworkConstants.FrameworkIdentifiers.MazeAdministration},
+            {"client", FrameworkConstants.FrameworkIdentifiers.MazeClient}
         };
 
         private static readonly Dictionary<string, string> _knownProfiles = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {

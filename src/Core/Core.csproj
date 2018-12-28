@@ -15,6 +15,12 @@
     <DefineConstants>IS_NET40_CLIENT;NUGET_FRAMEWORKS_INTERNAL</DefineConstants>
     <LangVersion>5</LangVersion>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DefineConstants>IS_NET40_CLIENT;NUGET_FRAMEWORKS_INTERNAL;NET40</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DefineConstants>IS_NET40_CLIENT;NUGET_FRAMEWORKS_INTERNAL;NET40</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="..\..\Common\CommonResources.resx">
       <Link>Common\CommonResources.resx</Link>
@@ -142,9 +148,6 @@
     <Compile Include="..\..\NuGet.Client\src\NuGet.Core\NuGet.Frameworks\FrameworkSpecificMapping.cs">
       <Link>NuGet.Frameworks\FrameworkSpecificMapping.cs</Link>
     </Compile>
-    <Compile Include="..\..\NuGet.Client\src\NuGet.Core\NuGet.Frameworks\HashCodeCombiner.cs">
-      <Link>NuGet.Frameworks\HashCodeCombiner.cs</Link>
-    </Compile>
     <Compile Include="..\..\NuGet.Client\src\NuGet.Core\NuGet.Frameworks\NuGetFramework.cs">
       <Link>NuGet.Frameworks\NuGetFramework.cs</Link>
     </Compile>
@@ -160,16 +163,16 @@
     <Compile Include="..\..\NuGet.Client\src\NuGet.Core\NuGet.Frameworks\Strings.Designer.cs">
       <Link>NuGet.Frameworks\Strings.Designer.cs</Link>
     </Compile>
-    <Compile Include="..\..\NuGet.Client\src\NuGet.Core\NuGet.Shared\HashCodeCombiner.cs">
+    <Compile Include="..\..\NuGet.Client\build\Shared\HashCodeCombiner.cs">
       <Link>NuGet.Shared\HashCodeCombiner.cs</Link>
     </Compile>
-    <Compile Include="..\..\NuGet.Client\src\NuGet.Core\NuGet.Shared\SharedExtensions.cs">
+    <Compile Include="..\..\NuGet.Client\build\Shared\SharedExtensions.cs">
       <Link>NuGet.Shared\SharedExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\..\NuGet.Client\src\NuGet.Core\NuGet.Shared\TypeExtensions.cs">
+    <Compile Include="..\..\NuGet.Client\build\Shared\TypeExtensions.cs">
       <Link>NuGet.Shared\TypeExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\..\NuGet.Client\src\NuGet.Core\NuGet.Shared\TypeInfo.cs">
+    <Compile Include="..\..\NuGet.Client\build\Shared\TypeInfo.cs">
       <Link>NuGet.Shared\TypeInfo.cs</Link>
     </Compile>
     <Compile Include="Analysis\IPackageRule.cs" />
@@ -387,7 +390,6 @@
     <Compile Include="ProjectManager.cs" />
     <Compile Include="FileModifiers\IPackageFileTransformer.cs" />
     <Compile Include="Repositories\DataServicePackageRepository.cs" />
-    <Compile Include="Utility\HashCodeCombiner.cs" />
     <Compile Include="Http\HttpClient.cs" />
     <Compile Include="Utility\PackageDownloader.cs" />
     <Compile Include="Utility\IHashProvider.cs" />

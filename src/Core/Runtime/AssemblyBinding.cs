@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Xml.Linq;
+using NuGet.Shared;
 
 namespace NuGet.Runtime
 {

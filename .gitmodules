@@ -4,4 +4,4 @@
 [submodule "NuGet.Client"]
 	path = NuGet.Client
 	url = https://github.com/MazeAdmin/NuGet.Client.git
-	branch = dev
+	branch = release-4.9.2-rtm

@@ -1,4 +1,6 @@
 using System;
+using NuGet.Shared;
+
 namespace NuGet
 {
     public class PackageOperation
